@@ -4,11 +4,13 @@
     --basic-dark-blue: #293449;
     --basic-background: #f1f5f7;
     --basic-blue: #32425c;
+    --basic-grey: #3d546f;
     --basic-red: #ee3643;
     --basic-green: #63a63e;
     --basic-dark-grey: #b7bfc8;
     --basic-beige: #f7f3ec;
     --basic-grey-light: #c5c5c5;
+    --basic-border: #e5e5e5;
 
     --special-yellow: #ffbf47;
     --special-yellow-light: #ffd27e;
@@ -174,6 +176,265 @@ img {
     line-height: 21px;
     color: var(--basic-black);
 }
+
+        /* Пользователь Каталог */
+
+.login {
+    font: inherit;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 21px;
+    line-height: 21px;
+    text-align: center;
+    color: #000000;
+    padding: 12px 57px 12px 56px;
+    background-color: var(--basic-white);
+}
+
+.my-order,
+.personal-area {
+    font: inherit;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 16px;
+    line-height: 18px;
+    text-align: center;
+    color: var(--basic-blue);
+}
+
+.login:hover svg:first-child path,
+.login:hover svg:last-child path {
+    fill: var(--basic-grey);
+}
+
+
+.my-order:hover,
+.personal-area:hover {
+    color: var(--basic-red);
+}
+
+.my-order:active,
+.personal-area:active {
+    color: var(--special-footer-nav);
+}
+
+.login:active,
+.login:active svg:first-child path,
+.login:active svg:last-child path {
+    color: var(--special-footer-nav);
+    fill: var(--special-footer-nav);
+}
+
+        /*  */
+
+        /* Каталог хлебные крошки */
+
+.crumb-item a {
+    font-family: "PT Sans", Arial, sans-serif;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 13px;
+    line-height: 18px;
+    align-items: center;
+    text-transform: uppercase;
+    color: var(--basic-black);
+}
+
+.perforators h2 {
+    font: inherit;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 30px;
+    line-height: 30px;
+    align-items: center;
+    text-transform: uppercase;
+    color: var(--basic-blue);
+    background-color: var(--basic-background);
+}
+
+        /* Фильтры */
+
+.filter-form h3 {
+    font-family: "PT Sans", Arial, sans-serif;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 13px;
+    line-height: 18px;
+    text-transform: uppercase;
+    align-items: center;
+    color: #000000;
+    background-color: var(--basic-beige);
+}
+
+.filter-form legend {
+    font-family: "PT Sans", Arial, sans-serif;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 17px;
+    line-height: 30px;
+    align-items: center;
+    text-transform: uppercase;
+    color: #000000;
+}
+
+.price-filter ul li:first-child {
+    width: 220px;
+    height: 80px;
+    background-color: var(--basic-beige);
+}
+
+.price-filter ul li:nth-child(2) input,
+.price-filter ul li:last-child input {
+    background-color: var(--basic-beige);
+}
+
+.filter-form label {
+    font-family: "PT Sans", Arial, sans-serif;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 15px;
+    line-height: 19px;
+    text-transform: uppercase;
+    color: #000000;
+}
+
+.filter-button {
+    width: 220px;
+    height: 38px;
+    font-family: "PT Sans", Arial, sans-serif;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 13px;
+    line-height: 18px;
+    text-align: center;
+    text-transform: uppercase;
+    color: #000000;
+}
+
+        /* Сортировка */
+
+.sorting {
+    background-color: var(--basic-beige);
+}
+
+.sorting h3 {
+    font-family: "PT Sans", Arial, sans-serif;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 13px;
+    line-height: 18px;
+    text-transform: uppercase;
+    align-items: center;
+    color: #000000;
+}
+
+.sorting-button:not(.arrow) {
+    border: none;
+    font-family: "PT Sans", Arial, sans-serif;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 13px;
+    text-transform: uppercase;
+    line-height: 18px;
+    align-items: center;
+    mix-blend-mode: normal;
+    opacity: 0.3;
+    background-color: var(--basic-beige);
+    border-bottom: 1px dotted var(--basic-red);
+}
+
+.arrow {
+    border: none;
+    background-color: var(--basic-beige);
+}
+
+.arrow svg path:hover {
+    fill: var(--basic-black);
+    opacity: 1;
+}
+
+.arrow:focus svg path {
+    fill: var(--basic-red);
+}
+
+.sorting-button:hover:not(.arrow) {
+    opacity: 1;
+    border-bottom: 1px solid var(--basic-red);
+}
+
+.sorting-button:focus:not(.arrow) {
+    color: var(--basic-red);
+    border: none;
+    opacity: 1;
+}
+
+        /* Каталог перфораторы */
+
+.perforator-item {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    width: 220px;
+    height: 318px;
+    margin-bottom: 5px;
+    border: 1px solid var(--special-border);
+}
+
+.perforator-item:hover {
+    box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.15);
+}
+
+.page-list li {
+    margin-bottom: 20px;
+}
+
+.page-item {
+    padding: 10px 15px 10px 15px;
+    border: 1px solid var(--basic-border);
+    border-radius: 2px;
+    color: var(--basic-black);
+}
+
+.page-item:hover {
+    border-color: var(--special-yellow-active);
+}
+
+.page-item:active {
+    border-color: var(--basic-red);
+}
+
+.page-item:focus {
+    color: var(--basic-white);
+    background-color: var(--basic-red);
+}
+
+        /* Каталог о перфораторах */
+
+.about-perforators {
+    background-color: var(--basic-background);
+}
+
+.about-perforators h2 {
+    font: inherit;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 30px;
+    line-height: 30px;
+    text-transform: uppercase;
+    color: #000000;
+}
+
+.about-perforators p {
+    font-family: "PT Sans", Arial, sans-serif;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 13px;
+    line-height: 24px;
+    color: #000000;
+}
+
+        /*  */
 
 .login-link:hover {
     color: var(--basic-red);
