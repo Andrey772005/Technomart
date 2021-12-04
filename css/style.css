@@ -323,6 +323,13 @@ img {
 
         /* Каталог хлебные крошки */
 
+.crumbs-list {
+    display: flex;
+    flex-direction: row;
+    justify-content: stretch;
+    grid-column: 1 / -1;
+}
+
 .crumb-item a {
     font-family: "PT Sans", Arial, sans-serif;
     font-style: normal;
@@ -335,20 +342,38 @@ img {
 }
 
 .perforators h2 {
+    display: inline-block;
+    grid-column: 1 / -1;
+    width: 880px;
+    margin: auto;
+    padding: 30px 30px 30px;
     font: inherit;
     font-style: normal;
     font-weight: normal;
     font-size: 30px;
     line-height: 30px;
-    align-items: center;
     text-transform: uppercase;
     color: var(--basic-blue);
     background-color: var(--basic-background);
 }
 
+.perforators ul {
+    padding: 0;
+}
+
         /* Фильтры */
 
+.filter-form {
+    grid-column: 1 / 2;
+    grid-row: 3 / 6;
+    padding: 0;
+}
+
 .filter-form h3 {
+    width: 220px;
+    height: 40px;
+    margin: 0;
+    margin-bottom: 14px;
     font-family: "PT Sans", Arial, sans-serif;
     font-style: normal;
     font-weight: normal;
@@ -371,8 +396,27 @@ img {
     color: #000000;
 }
 
+fieldset {
+    padding: 0;
+    border: none;
+    border-bottom: 1px solid var(--basic-grey-light);
+
+}
+
+input[type=range] {
+    display: block;
+    box-sizing: border-box;
+    margin: 0;
+    padding-top: 50px;
+}
+
+input[type=number] {
+    display: inline;
+    width: 95px;
+}
+
 .price-filter ul li:first-child {
-    width: 220px;
+    width: auto;
     height: 80px;
     background-color: var(--basic-beige);
 }
@@ -380,6 +424,11 @@ img {
 .price-filter ul li:nth-child(2) input,
 .price-filter ul li:last-child input {
     background-color: var(--basic-beige);
+}
+
+.producers-filter {
+    padding: 0;
+    border: none;
 }
 
 .filter-form label {
@@ -407,8 +456,22 @@ img {
 
         /* Сортировка */
 
-.sorting {
+.sorting { 
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    grid-column: 2 / -1;
+    grid-row: 3 / 4;
     background-color: var(--basic-beige);
+}
+
+.sorting-list {
+   align-items: center;
+}
+
+.sorting-list:not(h3) {
+    display: flex;
+    padding-left: 140px;
 }
 
 .sorting h3 {
@@ -464,14 +527,33 @@ img {
 
         /* Каталог перфораторы */
 
-.perforator-item {
+.perforators {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: 40px 90px 40px auto auto auto auto auto;
+    grid-gap: 20px;
+    width: 940px;
+    margin: auto;
+    margin-bottom: 58px;
+}
+
+.perforators-list {
+    display: grid;
+    grid-template-columns: repeat(3, auto);
+    grid-gap: 20px;
+    grid-column: 2 / 5;
+    grid-row: 4 / 7;
+    margin: 0;
+}
+
+.perforator-item a {
     display: flex;
     flex-direction: column;
-    justify-content: center;
+    justify-content: space-between;
     text-align: center;
     width: 220px;
     height: 318px;
-    margin-bottom: 5px;
+    padding: 22px 33px 21px 43px;
     border: 1px solid var(--special-border);
 }
 
@@ -479,8 +561,11 @@ img {
     box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.15);
 }
 
-.page-list li {
-    margin-bottom: 20px;
+.page-list {
+    display: flex;
+    flex-direction: row;
+    grid-column: 2 / -1;
+
 }
 
 .page-item {
@@ -507,9 +592,18 @@ img {
 
 .about-perforators {
     background-color: var(--basic-background);
+    padding-top: 64px;
+}
+
+.about-perforators-wrapper {
+    width: 940px;
+    margin: auto;
+    padding-bottom: 68px;
 }
 
 .about-perforators h2 {
+    margin: 0;
+    padding-bottom: 25px;
     font: inherit;
     font-style: normal;
     font-weight: normal;
@@ -816,12 +910,15 @@ goods-list {
 }
 
 .benefit a {
+    display: block;
     font: inherit;
     font-style: normal;
     font-weight: bold;
     font-size: 21px;
     color: var(--basic-white);
     background-color: var(--basic-blue);
+    width: 240px;
+    height: 61px;
     padding: 14px 139px 18px 22px;
 }
 
