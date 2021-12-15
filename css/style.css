@@ -146,6 +146,18 @@ img {
     margin-right: 69px;
 }
 
+.user {
+    width: 299px;
+    min-height: 70px;
+    margin: 0;
+    padding: 0;
+}
+
+.user li a:first-child {
+    display: flex;
+    flex-direction: row;
+}
+
 .main-navigation-wrapper {
     grid-row: auto;
 }
@@ -301,14 +313,18 @@ img {
         /* Пользователь Каталог */
 
 .login {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    width: 299px;
+    height: 45px;
     font: inherit;
     font-style: normal;
     font-weight: normal;
     font-size: 21px;
     line-height: 21px;
-    text-align: center;
     color: #000000;
-    padding: 12px 57px 12px 56px;
     background-color: var(--basic-white);
 }
 
