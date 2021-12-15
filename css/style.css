@@ -120,7 +120,30 @@ img {
 }
 
 .header-contacts-wrapper {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
     grid-row: 1fr;
+    width: 940px;
+    min-height: 153px;
+    margin: auto;
+    padding: 0;
+}
+
+.header-contacts-wrapper ul {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.header-contacts-list li:first-child {
+    margin-right: 93px;
+}
+
+.header-contacts-list li:nth-child(2) {
+    display: flex;
+    flex-direction: column;
+    margin-right: 69px;
 }
 
 .main-navigation-wrapper {
