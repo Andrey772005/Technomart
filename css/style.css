@@ -347,7 +347,7 @@ img {
 
 .bookmarks:active,
 .cart:active, 
-.checkout:active   {
+.checkout:active {
     opacity: 0.5;
 }
 
@@ -363,7 +363,6 @@ img {
 }
 
 .header-contacts-wrapper {
-    grid-row: 1fr;
     margin: auto;
     align-items: center;
     width: 940px;
@@ -378,7 +377,7 @@ img {
 }
 
 .header-contacts-list p:first-child,
-.catalog-contacts-list p:first-child{
+.catalog-contacts-list p:first-child {
     font-family: "Cuprum", Arial, sans-serif;
     font-style: italic;
     font-weight: normal;
@@ -1088,7 +1087,7 @@ fieldset {
 .producers-filter {
     width: 220px;
     min-height: 40px;
-    margin-bottom: 17px;
+    margin-bottom: 27px;
     padding: 0;
     border: none;
     border-bottom: 1px solid var(--special-border);
@@ -1767,6 +1766,9 @@ goods-list {
     padding: 0;
 }
 
+.min-map {
+    cursor: pointer;
+}
 
 .about-us h2,
 .contact h2 {
@@ -1819,7 +1821,7 @@ goods-list {
     width: 25px;
     height: 2px;
     left: 1px;
-    margin-top: 10px;
+    margin-top: 12px;
     background-image: url("../img/svg/red_line.svg");
 }
 
@@ -2000,7 +2002,7 @@ goods-list {
 
 .modal {
     position: fixed;
-    left: 282px;
+    left: 632px;
     bottom: 352px;
     color: var(--basic-black);
     filter: drop-shadow(0px 4px 20px rgba(0, 0, 0, 0.15));
@@ -2020,6 +2022,11 @@ goods-list {
 
 .modal-form-open {
     display: block;
+    animation: bounce 0.6s;
+}
+
+.modal-form-error {
+    animation: shake 0.6s;
 }
 
 .user-form {
@@ -2051,7 +2058,7 @@ goods-list {
     width: 220px;
     height: 38px;
     padding-left: 12px;
-    border: 2px solid #E5B864;
+    border: 2px solid #e5b864;
     box-sizing: border-box;
     border-radius: 2px;
     font-family: "PT Sans", Arial, sans-serif;
@@ -2063,18 +2070,18 @@ goods-list {
 }
 
 .user-form input:focus {
-    border: none;
+    outline: #e5b864;
 }
 
 .user-form textarea:focus {
-    border: none;
+    outline: #e5b864;
 }
 
 .user-form textarea {
     width: 460px;
     height: 114px;
     padding-left: 12px;
-    border: 2px solid #E5B864;
+    border: 2px solid #e5b864;
     box-sizing: border-box;
     border-radius: 2px;
     resize: none;
@@ -2112,6 +2119,7 @@ goods-list {
 
 .modal-map-open {
     display: block;
+    animation: bounce 0.6s;
 }
 
 .modal-map-close {
@@ -2121,6 +2129,7 @@ goods-list {
 .modal-map {
     width: 943px;
     height: 449px;
+    left: 482px;
     border: none;
 }
 
@@ -2202,3 +2211,45 @@ goods-list {
 .modal-cart-close {
     display: none;
 }
+
+        /* Анимация модального окна */
+
+@keyframes bounce {
+  0% {
+    transform: translateY(-2000px);
+  }
+
+  70% {
+    transform: translateY(30px);
+  }
+
+  90% {
+    transform: translateY(-10px);
+  }
+
+  100% {
+    transform: translateY(0);
+  }
+}
+
+@keyframes shake {
+    0%,
+    100% {
+      transform: translateX(0);
+    }
+  
+    10%,
+    30%,
+    50%,
+    70%,
+    90% {
+      transform: translateX(-10px);
+    }
+  
+    20%,
+    40%,
+    60%,
+    80% {
+      transform: translateX(10px);
+    }
+  }
